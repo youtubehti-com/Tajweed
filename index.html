@@ -3,144 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>   ( ) |  </title>
+    <title>الدرس الرابع: موانع الوقف بالروم والإشمام | منصة التجويد التعليمية</title>
     <style>
         :root {
-            --primary-color: #1a5276; /*    */
-            --secondary-color: #16a085; /*   */
-            --accent-color: #d35400; /*    */
-            --bg-color: #f0f4f8; /*      */
-            --text-color: #2c3e50;
-            --white: #ffffff;
+            --primary-color: #1b4d3e; /* أخضر زمردي غامق فخم */
+            --secondary-color: #c5a059; /* ذهبي ملكي مطفي */
+            --accent-color: #8d6e63; /* بني برونزي هادئ */
+            --bg-color: #f7f9f7; /* خلفية عاجية بلمحة خضراء باردة */
+            --card-bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #4a4a4a;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-dark);
             line-height: 1.8;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: linear-gradient(135deg, #1a5276 0%, #16a085 100%);
-            color: white;
-            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #1b4d3e 0%, #2e7d32 100%);
+            color: #f1f1f1;
+            padding: 4rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border-bottom: 5px solid var(--accent-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            border-bottom: 5px solid var(--secondary-color);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: 800; /* Bold */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
         }
 
         header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-top: 10px;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-top: 15px;
+            color: var(--secondary-color);
         }
 
         .container {
             max-width: 1000px;
-            margin: -30px auto 40px;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: -50px auto 50px;
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             position: relative;
+            border: 1px solid rgba(197, 160, 89, 0.2);
         }
-
-        h2, h3, h4 {
-            color: var(--primary-color);
-            font-weight: 800; /* Bold */
-            border-right: 6px solid var(--secondary-color);
-            padding-right: 15px;
-            margin-top: 30px;
-        }
-
-        h2 { font-size: 1.8rem; }
-        h3 { font-size: 1.5rem; color: #2471a3; }
 
         .intro {
-            background-color: #fdfefe;
-            padding: 20px;
-            border-radius: 12px;
-            border-right: 4px solid var(--secondary-color);
-            font-style: italic;
-            margin-bottom: 2.5rem;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
-            font-weight: 500;
-            color: #555;
-        }
-
-        .definition-box {
-            background: linear-gradient(to left, #e8f8f5, #ffffff);
-            border: 1px solid #a3e4d7;
+            background-color: #f1f8f5;
             padding: 25px;
             border-radius: 15px;
-            margin: 25px 0;
-            font-size: 1.2rem;
-            position: relative;
+            border-right: 6px solid var(--secondary-color);
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            line-height: 2;
+            font-weight: 500;
         }
 
-        /*    */
+        h2, h3 {
+            color: var(--primary-color);
+            font-weight: 800;
+            border-right: 6px solid var(--secondary-color);
+            padding-right: 15px;
+            margin-top: 40px;
+        }
+
+        h2 { font-size: 2.1rem; }
+        h3 { font-size: 1.7rem; color: #2e7d32; }
+
+        .definition-clean {
+            padding: 20px 15px;
+            margin: 25px 0;
+            font-size: 1.3rem;
+            border-right: 4px solid var(--secondary-color);
+            background: #fffcf5;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .definition-clean strong {
+            color: var(--primary-color);
+            font-size: 1.45rem;
+            font-weight: 900;
+        }
+
         details {
-            margin-bottom: 15px;
-            border: 2px solid #e5e8e8;
-            border-radius: 12px;
-            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #e8ede9;
+            border-radius: 15px;
             transition: all 0.3s ease;
+            background: #fff;
+            overflow: hidden;
         }
 
         details[open] {
             border-color: var(--secondary-color);
-            box-shadow: 0 5px 15px rgba(22, 160, 133, 0.1);
+            box-shadow: 0 8px 25px rgba(27, 77, 62, 0.1);
         }
 
         summary {
-            font-weight: 800; /* Bold */
-            font-size: 1.25rem;
-            color: var(--white);
+            font-weight: 800;
+            font-size: 1.3rem;
             background-color: var(--primary-color);
+            color: #fff;
             cursor: pointer;
-            padding: 15px;
+            padding: 20px 25px;
             list-style: none;
-            transition: background 0.3s;
-        }
-
-        summary:hover {
-            background-color: #21618c;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--secondary-color);
         }
 
         summary::before {
-            content: "";
-            margin-left: 10px;
-            font-size: 0.9rem;
-            transition: transform 0.3s;
-            display: inline-block;
-        }
-
-        details[open] summary::before {
-            transform: rotate(-90deg);
+            content: "◆";
+            margin-left: 12px;
+            color: var(--secondary-color);
         }
 
         .example {
             display: inline-block;
-            background: #fff3e0;
-            color: #e67e22;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-family: 'Traditional Arabic', 'Amiri', serif;
-            font-size: 1.4rem;
-            border: 1px solid #ffe0b2;
-            margin: 2px;
+            background: #f8fcf9;
+            color: var(--primary-color);
+            padding: 6px 18px;
+            border-radius: 10px;
+            font-weight: 900;
+            font-family: 'Traditional Arabic', serif;
+            font-size: 1.8rem;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-bottom: 4px solid var(--secondary-color);
+            margin: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         table {
@@ -148,155 +152,161 @@
             border-collapse: separate;
             border-spacing: 0;
             margin: 25px 0;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         th {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 800;
         }
 
         td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            border-left: 1px solid #eee;
+            padding: 18px;
+            border-bottom: 1px solid #f1f1f1;
             text-align: center;
-            background-color: #fff;
+            background: #fff;
+            font-weight: 500;
         }
 
-        tr:last-child td { border-bottom: none; }
-
         .note {
-            border-right: 6px solid var(--accent-color);
-            background: #fef5e7;
-            padding: 20px 25px;
-            margin: 30px 0;
-            border-radius: 0 10px 10px 0;
-            color: #873600;
+            border-right: 8px solid var(--secondary-color);
+            background: #fefefa;
+            padding: 30px;
+            margin: 45px 0;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(197, 160, 89, 0.1);
         }
 
         .note strong {
-            color: var(--accent-color);
-            font-size: 1.2rem;
+            color: var(--primary-color);
             display: block;
             margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-decoration: underline;
+            text-underline-offset: 5px;
         }
 
         footer {
             text-align: center;
-            padding: 3rem;
-            background-color: var(--primary-color);
-            color: white;
-            margin-top: 50px;
+            padding: 4rem;
+            background-color: #122d25;
+            color: #c5a059;
+            margin-top: 60px;
+            border-top: 4px solid var(--secondary-color);
         }
 
-        footer p {
-            margin: 5px 0;
-            font-weight: bold;
-        }
-
-        ul li {
-            margin-bottom: 12px;
-        }
-
-        /*    */
         @media (max-width: 600px) {
-            .container { padding: 20px; margin: -20px 10px 20px; }
-            header h1 { font-size: 1.8rem; }
-            table { font-size: 0.9rem; }
+            .container { padding: 25px; margin: -30px 15px 30px; }
+            header h1 { font-size: 2.1rem; }
+            header { padding: 3.5rem 1rem; }
+            td, th { padding: 10px; font-size: 0.95rem; }
+            .example { font-size: 1.4rem; padding: 4px 10px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1> : </h1>
-    <p>    </p>
+    <h1>الدرس الرابع: موانع الوقف بالروم والإشمام</h1>
+    <p>سلسلة باب الوقف على أواخر الكلم</p>
 </header>
 
 <div class="container">
     <div class="intro">
-                  ...        .
+        <b>بسم الله الرحمن الرحيم، الحمد لله والصلاة والسلام على رسول الله وبعد.</b> <br>
+        ⬅️ مع درس جديد نُكمل فيه ما بدأناه، ومعنا اليوم بإذن الله تعالى <b>"موانع الوقف بالروم والإشمام"</b>. 
+        فصلوا على حبيبكم النبي ﷺ.
     </div>
 
-    <h2>    (   )</h2>
-    <div class="definition-box">
-         <strong>   </strong>       (  )   .
-    </div>
+    <h2>🚫 موانع الوقف بالروم والإشمام</h2>
+    <p>تُمتنع هذه الأوجه ويجب الوقف بالسكون المحض في الحالات التالية:</p>
 
-    <h3>   :</h3>
-
-    <!-- :   -->
-    <details>
-        <summary> :  </summary>
-        <div style="padding: 15px;">
-            <p>        .</p>
+    <details open>
+        <summary>1. عارض الشكل</summary>
+        <div style="padding: 25px; background-color: #fafafa;">
+            <div style="margin-bottom: 20px; color: var(--primary-color); font-weight: 600;">
+                💡 <b>التعريف:</b> هو الحركة الطارئة التي تظهر على الحرف لسبب خارجي (مثل منع التقاء الساكنين)، بينما الأصل في الحرف هو السكون.
+            </div>
             
-            <h4>  </h4>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 35%;">المثال القرآني</th>
+                            <th style="width: 65%;">التوضيح والقاعدة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="example">قُلِ ادْعُواْ</span></td>
+                            <td style="text-align: right;">اللام ساكنة أصلاً، حُرِّكت بالكسر عارضاً. عند الوقف تعود لأصلها الساكن.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="example">عَلَيْهِمُ الأَسْبَابُ</span></td>
+                            <td style="text-align: right;">ميم جمع حُرِّكت بالضم عارضاً، وعند الوقف نعود للأصل وهو السكون.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="example">مَن يطْعِ الرَّسُولَ</span></td>
+                            <td style="text-align: right;">العين ساكنة للجزم، حُرِّكت بالكسر عارضاً، فتسكن عند الوقف محضاً.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="example">حِينئِذٍ - يَوْمَئِذٍ</span></td>
+                            <td style="text-align: right;">الذال ساكنة، وحركتها بسبب تنوين العوض. تسكن عند الوقف بسكون محض.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>2. ميم الجمع</summary>
+        <div style="padding: 20px;">
+            <p>ميم الجمع لا يدخلها روم ولا إشمام مطلقاً، وتأتي على شكلين:</p>
             <ul>
-                <li><strong>  :</strong>  <span class="example"></span>  <span class="example"></span>  <span class="example"></span>.</li>
-                <li><strong>  ( ):</strong>      <span class="example"></span>  <span class="example"></span>.</li>
-                <li><strong>   :</strong>    <span class="example"></span>.</li>
-                <li><strong> :</strong>  <span class="example"> </span>.</li>
-                <li><strong>  :</strong>  <span class="example"></span>  <span class="example"></span>  <span class="example"></span>.</li>
-                <li><strong> :</strong>  <span class="example"></span>.</li>
-                <li><strong> :</strong>     <span class="example"></span>  <span class="example"></span>.</li>
+                <li><strong>ساكنة (الأصل):</strong> مثل <span class="example">عَلَيْكُمْ أَنفُسَكُمْ</span>، والساكن لا روم فيه.</li>
+                <li><strong>محركة للساكن بعدها:</strong> مثل <span class="example">عَلَيْهِمُ الْقِتَالُ</span>، وحركتها عارضة تزول عند الوقف.</li>
             </ul>
         </div>
     </details>
 
-    <!-- :   -->
     <details>
-        <summary> :  </summary>
-        <div style="padding: 15px;">
-            <p>           .</p>
-            
-            <p><strong>             :</strong></p>
-            <table>
-                <thead>
-                    <tr>
-                        <th> </th>
-                        <th>  ( )</th>
-                        <th>  </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> ()</td>
-                        <td><span class="example"></span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> ()</td>
-                        <td><span class="example"></span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td> ()</td>
-                        <td><span class="example"></span></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+        <summary>3. تاء التأنيث الموقوف عليها بالهاء</summary>
+        <div style="padding: 20px;">
+            <p>وهي التاء المربوطة التي تنقلب هاءً عند الوقف، فيمتنع فيها الروم والإشمام.</p>
+            <p><strong>أمثلة:</strong> <span class="example">الْقارِعَةُ</span> ، <span class="example">نِعْمَةُ</span> ، <span class="example">جَنَّةُ</span>.</p>
+            <hr>
+            <p>⚠️ <strong>تنبيه:</strong> بخلاف التاء المبسوطة (المفتوحة) مثل <span class="example">بَقِيَّتُ</span> ، <span class="example">سُنَّتُ</span>، فهذه <b>يدخلها</b> الروم والإشمام لأنها تظل تاءً في الوقف.</p>
         </div>
     </details>
 
-    <div class="note">
-        <strong>  :</strong>
-         <strong> </strong>:       .
-        <br><br>
-         <strong> </strong>:         (   ).
-    </div>
+    <details>
+        <summary>4. الساكن سكوناً أصلياً</summary>
+        <div style="padding: 20px;">
+            <p>الحرف الذي يسكن وصلاً ووقفاً، لا وجه فيه إلا السكون المحض.</p>
+            <p><strong>مثال:</strong> <span class="example">قُمْ فَأَنذِرْ</span> (الميم والراء ساكنتان أصلاً).</p>
+        </div>
+    </details>
+
+    <details>
+        <summary>5. المنصوب أو المفتوح</summary>
+        <div style="padding: 20px;">
+            <p>لا خلاف أن الفتحة لخفتها لا يدخلها روم ولا إشمام، سواء كان الاسم معرباً أو مبنياً.</p>
+            <p><strong>أمثلة:</strong> <span class="example">مُسْتَقِيمًا</span> ، <span class="example">الَّذِينَ</span>.</p>
+        </div>
+    </details>
+
 </div>
 
 <footer>
-    <p>        </p>
-    <p>         </p>
+    <p>نسأل الله أن يصلح نياتنا وذرياتنا وأن يجعل هذا العمل خالصاً لوجهه الكريم</p>
+    <p>تم إعداد المادة العلمية لتبسيط علوم التجويد © 2026</p>
 </footer>
 
 </body>
