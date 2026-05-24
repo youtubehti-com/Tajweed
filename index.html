@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>   ( ) |  </title>
+    <style>
+        :root {
+            --primary-color: #1a5276; /*    */
+            --secondary-color: #16a085; /*   */
+            --accent-color: #d35400; /*    */
+            --bg-color: #f0f4f8; /*      */
+            --text-color: #2c3e50;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a5276 0%, #16a085 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800; /* Bold */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -30px auto 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        h2, h3, h4 {
+            color: var(--primary-color);
+            font-weight: 800; /* Bold */
+            border-right: 6px solid var(--secondary-color);
+            padding-right: 15px;
+            margin-top: 30px;
+        }
+
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 1.5rem; color: #2471a3; }
+
+        .intro {
+            background-color: #fdfefe;
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+            font-weight: 500;
+            color: #555;
+        }
+
+        .definition-box {
+            background: linear-gradient(to left, #e8f8f5, #ffffff);
+            border: 1px solid #a3e4d7;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        /*    */
+        details {
+            margin-bottom: 15px;
+            border: 2px solid #e5e8e8;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(22, 160, 133, 0.1);
+        }
+
+        summary {
+            font-weight: 800; /* Bold */
+            font-size: 1.25rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            cursor: pointer;
+            padding: 15px;
+            list-style: none;
+            transition: background 0.3s;
+        }
+
+        summary:hover {
+            background-color: #21618c;
+        }
+
+        summary::before {
+            content: "";
+            margin-left: 10px;
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        details[open] summary::before {
+            transform: rotate(-90deg);
+        }
+
+        .example {
+            display: inline-block;
+            background: #fff3e0;
+            color: #e67e22;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.4rem;
+            border: 1px solid #ffe0b2;
+            margin: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            border-left: 1px solid #eee;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .note {
+            border-right: 6px solid var(--accent-color);
+            background: #fef5e7;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+            color: #873600;
+        }
+
+        .note strong {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+
+        /*    */
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin: -20px 10px 20px; }
+            header h1 { font-size: 1.8rem; }
+            table { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> : </h1>
+    <p>    </p>
+</header>
+
+<div class="container">
+    <div class="intro">
+                  ...        .
+    </div>
+
+    <h2>    (   )</h2>
+    <div class="definition-box">
+         <strong>   </strong>       (  )   .
+    </div>
+
+    <h3>   :</h3>
+
+    <!-- :   -->
+    <details>
+        <summary> :  </summary>
+        <div style="padding: 15px;">
+            <p>        .</p>
+            
+            <h4>  </h4>
+            <ul>
+                <li><strong>  :</strong>  <span class="example"></span>  <span class="example"></span>  <span class="example"></span>.</li>
+                <li><strong>  ( ):</strong>      <span class="example"></span>  <span class="example"></span>.</li>
+                <li><strong>   :</strong>    <span class="example"></span>.</li>
+                <li><strong> :</strong>  <span class="example"> </span>.</li>
+                <li><strong>  :</strong>  <span class="example"></span>  <span class="example"></span>  <span class="example"></span>.</li>
+                <li><strong> :</strong>  <span class="example"></span>.</li>
+                <li><strong> :</strong>     <span class="example"></span>  <span class="example"></span>.</li>
+            </ul>
+        </div>
+    </details>
+
+    <!-- :   -->
+    <details>
+        <summary> :  </summary>
+        <div style="padding: 15px;">
+            <p>           .</p>
+            
+            <p><strong>             :</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>  ( )</th>
+                        <th>  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> ()</td>
+                        <td><span class="example"></span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> ()</td>
+                        <td><span class="example"></span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> ()</td>
+                        <td><span class="example"></span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <div class="note">
+        <strong>  :</strong>
+         <strong> </strong>:       .
+        <br><br>
+         <strong> </strong>:         (   ).
+    </div>
+</div>
+
+<footer>
+    <p>        </p>
+    <p>         </p>
+</footer>
+
+</body>
+</html>
